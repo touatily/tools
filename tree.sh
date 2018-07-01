@@ -1,5 +1,39 @@
 #!/bin/bash
 
+
+help="$0 is an alternative of the tree command \n\
+Usage:\n\
+\t$0 [-f file or directory] [-i ident] [-d deth] \n\
+\t$0 [-h]"
+
+
+file="."
+i=""
+
+while getopts ":f:i:d:h:" opt; do
+  case $opt in
+    f)
+      file=$OPTARG
+      ;;
+    d)
+      deth=$OPTARG
+      ;;
+    h)
+      echo -e $help
+      exit 1
+      ;;
+    i)
+      i=$OPTARG
+      ;;
+    *)
+      echo -e "$help"
+      exit 1
+      ;;
+  esac
+done
+
+
+
 function tr() {
 	# $1 is the directory
 	# $2 is the ident
@@ -25,10 +59,6 @@ function tr() {
 	done
 }
 
-if [ $# -eq 1 ]; then
-	d=$1
-else
-	d="."
-fi
 
-tr $d ""
+
+tr $file "$i"
