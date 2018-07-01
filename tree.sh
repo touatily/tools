@@ -8,7 +8,7 @@ Usage:\n\
 
 
 file="."
-i=""
+ident="    "
 
 while getopts ":f:i:d:h:" opt; do
   case $opt in
@@ -23,7 +23,7 @@ while getopts ":f:i:d:h:" opt; do
       exit 1
       ;;
     i)
-      i=$OPTARG
+      ident=$OPTARG
       ;;
     *)
       echo -e "$help"
@@ -44,7 +44,7 @@ function tr() {
 	echo -e "[${s}]\t$2$f"
 
 
-	local i="    $2"
+	local i="$ident$2"
 	l=$(ls $1)
 
 
@@ -61,4 +61,4 @@ function tr() {
 
 
 
-tr $file "$i"
+tr $file "$ident"
