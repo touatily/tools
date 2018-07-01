@@ -6,8 +6,10 @@ function tr() {
 
 
 	f=`basename $1`
+	s=`du -sh $1 | cut -f -1`
+	echo -e "[${s}]\t$2$f"
 
-	echo "$2$f"
+
 	local i="    $2"
 	l=$(ls $1)
 
@@ -16,8 +18,9 @@ function tr() {
 		if [ -d "$1/$f" ]; then
 			tr "$1/${f}" "${i}"
 		else
-			f=`basename $f`
-			echo "${i}${f}"
+			file=`basename $f`
+			s=`du -sh "$1/$f" | cut -f -1`
+			echo -e "[${s}]\t${i}${file}"
 		fi 
 	done
 }
