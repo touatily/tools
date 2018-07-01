@@ -2,7 +2,13 @@
 
 ## tree.sh
 
-./tr is an alternative of the tree command 
+./tree.sh is an alternative of the tree command 
+
 Usage:
-	./tr [-f file or directory] [-i ident] [-d deth] 
-	./tr [-h]
+
+	./tree.sh [-f file/directory] [-i ident] [-d deth] 
+	./tree.sh [-h]
+	
+Examples:
+
+	/tree.sh -f /home -i "====" 
