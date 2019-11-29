@@ -23,7 +23,5 @@ void gest(int sig){
 int main() {
 	signal(SIGALRM, gest);
 	alarm(1);
-
-
 	getchar();
 }
