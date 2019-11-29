@@ -12,3 +12,8 @@ Usage:
 Examples:
 
 	/tree.sh -f /home -i "====" 
+
+
+## singal.c
+
+It is an program that uses unix signal primitive to implement a countdown
