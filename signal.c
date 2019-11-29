@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+
 int tmps = 20;
 
 void gest(int sig){
