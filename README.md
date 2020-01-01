@@ -17,3 +17,7 @@ Examples:
 ## singal.c
 
 It is an program that uses unix signal primitive to implement a countdown
+
+## graph_fonctions.py
+
+This script python draws famous functions' curves
