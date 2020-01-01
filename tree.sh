@@ -62,4 +62,3 @@ function tr() {
 
 
 tr $file "$ident"
-
